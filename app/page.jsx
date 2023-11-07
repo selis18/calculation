@@ -4,9 +4,12 @@ import { calculateDosage, calculateBodySurfaceArea, calculateOndansetron, calcul
   calculateHydrationRate, calculatePotassiumChloride, calculateCalciumGluconate, calculateMagnesiumSulfate } from './Calculations';
 
 function CalculationPage() {
-  const [height, setHeight] = useState(0);
-  const [weight, setWeight] = useState(0);
+  let [height, setHeight] = useState(0);
+  let [weight, setWeight] = useState(0);
   const [result, setResult] = useState('');
+
+  isNaN(height)? height=0 : height;
+  isNaN(weight)? weight=0 : weight;
 
   const handleCalculate = () => {
     const bodySurfaceArea = calculateBodySurfaceArea(height, weight);
