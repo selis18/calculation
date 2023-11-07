@@ -1,22 +1,21 @@
-import type { Metadata } from 'next'
+import { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import CalculationPage from './page'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export const metadata: Metadata = {
+export const metadata = {
   title: 'Мед. калькулятор',
   description: 'Расчет дозировок и площади поверхности тела',
 }
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout(){ 
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="ru">
+      <body className={inter.className}>
+        <CalculationPage/>
+        </body>
     </html>
   )
-}
+  }

@@ -1,9 +1,9 @@
-export const calculateBodySurfaceArea = (height: number, weight: number): number => {
+export const calculateBodySurfaceArea = (height, weight) => {
     const m2 = 0.007184 * Math.pow(weight, 0.425) * Math.pow(height, 0.725);
     return m2;
   }
   
-  export const calculateDosage = (bodySurfaceArea: number): number[] => {
+  export const calculateDosage = (bodySurfaceArea) => {
     const etoposideDosage = 100 * bodySurfaceArea;
     const cisplatinDosage = 20 * bodySurfaceArea;
     const ifosfamideDosage = 1500 * bodySurfaceArea;
@@ -11,27 +11,27 @@ export const calculateBodySurfaceArea = (height: number, weight: number): number
     return [etoposideDosage, cisplatinDosage, ifosfamideDosage, uromitexanDosage];
   }
   
-  export const calculateOndansetron = (weight: number): number => {
+  export const calculateOndansetron = (weight) => {
     return 0.15 * weight;
   }
   
-  export const calculateMannitol = (weight: number): number => {
+  export const calculateMannitol = (weight) => {
     return 0.5 * weight;
   }
 
-  export const calculateHydrationRate = (bodySurfaceArea: number): number => {
+  export const calculateHydrationRate = (bodySurfaceArea) => {
     return (83 * bodySurfaceArea) * 24;
   }
   
-  export const calculatePotassiumChloride = (bodySurfaceArea: number): number => {
+  export const calculatePotassiumChloride = (bodySurfaceArea) => {
     return 60 * bodySurfaceArea;
   }
   
-  export const calculateCalciumGluconate = (bodySurfaceArea: number): number => {
+  export const calculateCalciumGluconate = (bodySurfaceArea) => {
     return 20 * bodySurfaceArea;
   }
   
-  export const calculateMagnesiumSulfate = (bodySurfaceArea: number): number => {
+  export const calculateMagnesiumSulfate = (bodySurfaceArea) => {
     return 8 * bodySurfaceArea;
   }
   
