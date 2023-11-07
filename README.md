@@ -1,36 +1,32 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Calculation of Dosages and Body Surface Area
+*The project is a web application developed using React that allows for the calculation of dosages and determination of the body surface area of a patient.*
+Open - https://calculation-alpha.vercel.app/
 
-## Getting Started
+### Installation and Setup
+1. Clone the repository to your computer.
+2. Ensure that you have Node.js installed.
+3. Navigate to the project directory in the command line and run the command `npm install` to install the dependencies.
+4. Once the installation is complete, run the command npm start to start the application.
+5. The application will be available at `http://localhost:3000` in your web browser.
 
-First, run the development server:
+### Usage
+1. Enter the patient's height in centimeters in the corresponding input field.
+2. Enter the patient's weight in kilograms in the corresponding input field.
+3. Click the "Calculate" button to perform the dosage calculations and determine the body surface area.
+4. The calculation results will be displayed below the "Calculate" button as HTML markup.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Calculations
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+The application performs the following calculations based on the input data:
+* Calculation of the patient's body surface area.
+* Calculation of dosages for the following medications:
+  * Etoposide
+  * Cisplatin
+  * Ifosfamide
+  * Uromitexan
+  * Ondansetron
+  * Mannitol
+  * Hydration
+  * Potassium chloride
+  * Calcium gluconate
+  * Magnesium sulfate
