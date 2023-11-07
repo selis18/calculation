@@ -1,5 +1,5 @@
 # Calculation of Dosages and Body Surface Area
-The project is a web application developed using React that allows for the calculation of dosages and determination of the body surface area of a patient.*
+*The project is a web application developed using React that allows for the calculation of dosages and determination of the body surface area of a patient.*
 Open - https://calculation-alpha.vercel.app/
 
 ### Installation and Setup
