@@ -1,6 +1,6 @@
 'use client'
 import React, { useState } from 'react';
-import ChemicalDosage from './chemical_dosage'
+import ChemicalDosage from './dosages/chemical_dosage'
 import { BrowserRouter as Router, Route, Link, Routes } from 'react-router-dom';
 
 function CalculationsPage() {
