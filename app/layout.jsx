@@ -1,9 +1,9 @@
 import { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
-import CalculationPage from './page'
+import Main from './page'
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ['cyrillic'] })
 
 export const metadata = {
   title: 'Мед. калькулятор',
@@ -13,9 +13,12 @@ export const metadata = {
 export default function RootLayout(){ 
   return (
     <html lang="ru">
+      <head>
+        <link rel="icon" href="./assets/fav_med.ico" />
+      </head>
       <body className={inter.className}>
-        <CalculationPage/>
-        </body>
+        <Main/>
+      </body>
     </html>
   )
-  }
+}
