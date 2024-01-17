@@ -49,8 +49,8 @@ function CalculationPage() {
 
   return (
       <>
-        <div className="mt-5 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
-          <div className="sm:col-span-3 ">
+        <div className="m-5 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+          <div className="sm:col-span-3">
             <label
               htmlFor="height"
               className="block text-m font-mono leading-6 text-gray-900"
