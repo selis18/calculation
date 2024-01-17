@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import Main from './page'
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 const inter = Inter({ subsets: ['cyrillic'] })
 
