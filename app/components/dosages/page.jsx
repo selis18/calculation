@@ -89,7 +89,7 @@ function CalculationPage() {
           </div>
         </div>
 
-        <div className="pt-4">
+        <div className="p-4">
           <h2 className="text-xl font-mono font-semibold leading-7 text-gray-900">
             Результаты расчета:
           </h2>

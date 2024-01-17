@@ -5,7 +5,7 @@ import Energy from './components/energy/page'
 
 const Tab = ({ label, active, onClick }) => (
   <div
-    className={`tab ${active ? 'active' : ''}`}
+    className={`tab ${active ? 'bg-white mt-2 px-2 h-auto rounded-t-lg mx-1' : 'bg-zinc-300 p-2'} cursor-pointer w-64 h-24 flex items-center justify-center`}
     onClick={onClick}
   >
     {label} 
@@ -21,10 +21,9 @@ const Tabs = ({ tabs }) => {
 
   return (
     <header className="bg-white tabs">
-      <nav className="bg-zinc-50 flex max-w-xl items-center justify-between p-1 lg:px-8 tab-list">
+      <nav className="bg-zinc-300 flex items-center justify-between tab-list">
         {tabs.map((tab, index) => (
           <Tab
-            className='border-2 mt-1 font-mono font-light text-base leading-6 text-gray-600'
             key={index}
             label={tab.label}
             active={index === activeTab}
@@ -33,7 +32,7 @@ const Tabs = ({ tabs }) => {
         ))}
       </nav>
       <TabContent content={tabs[activeTab].content} />
-    </header >
+    </header>
   );
 };
 
