@@ -5,9 +5,9 @@ function Energy() {
   const [result, setResult] = useState("");
 
   const [gender, setGender] = useState("m");
-  const [weight, setWeight] = useState(0);
-  const [height, setHeight] = useState(0);
-  const [age, setAge] = useState(0);
+  const [weight, setWeight] = useState(null);
+  const [height, setHeight] = useState(null);
+  const [age, setAge] = useState(null);
   const [fa, setFa] = useState("1.1");
   const [tf, setTf] = useState("1");
   const [g, setG] = useState("1");
@@ -22,15 +22,17 @@ function Energy() {
     }
 
     const fre = oo * fa * tf * g * ts;
-    setResult("Фактический расход энергии (ФРЭ): " + fre.toFixed(2));
+    setResult(fre.toFixed(2));
   };
   return (
     <div className="m-5">
       <div className="input-container">
-        <label 
-            htmlFor="genders"
-            className="text-m font-mono leading-6 text-gray-900"
-        >Пол:</label>
+        <label
+          htmlFor="genders"
+          className="text-m font-mono leading-6 text-gray-900"
+        >
+          Пол:
+        </label>
         <select
           name="genders"
           value={gender}
@@ -42,10 +44,12 @@ function Energy() {
         </select>
       </div>
       <div className="input-container">
-        <label 
-        htmlFor="weight"
-        className="text-m font-mono leading-6 text-gray-900"
-        >Вес в кг: </label>
+        <label
+          htmlFor="weight"
+          className="text-m font-mono leading-6 text-gray-900"
+        >
+          Вес в кг:{" "}
+        </label>
         <input
           type="number"
           value={weight}
@@ -54,10 +58,12 @@ function Energy() {
         />
       </div>
       <div className="input-container">
-        <label 
-            htmlFor="height"
-            className="text-m font-mono leading-6 text-gray-900"
-            >Рост в см: </label>
+        <label
+          htmlFor="height"
+          className="text-m font-mono leading-6 text-gray-900"
+        >
+          Рост в см:{" "}
+        </label>
         <input
           type="number"
           value={height}
@@ -66,7 +72,12 @@ function Energy() {
         />
       </div>
       <div className="input-container">
-        <label htmlFor="age" className="text-m font-mono leading-6 text-gray-900">Возраст в годах: </label>
+        <label
+          htmlFor="age"
+          className="text-m font-mono leading-6 text-gray-900"
+        >
+          Возраст в годах:
+        </label>
         <input
           type="number"
           value={age}
@@ -75,16 +86,36 @@ function Energy() {
         />
       </div>
       <div className="input-container">
-        <label htmlFor="fa" className="text-m font-mono leading-6 text-gray-900">Фактор активности: </label>
-        <select id="fa"           className="w-full rounded-md border-0 p-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gray-600 sm:text-sm sm:leading-6" value={fa} onChange={(e) => setFa(e.target.value)}>
+        <label
+          htmlFor="fa"
+          className="text-m font-mono leading-6 text-gray-900"
+        >
+          Фактор активности:{" "}
+        </label>
+        <select
+          id="fa"
+          onChange={(e) => setFa(e.target.value)}
+          className="w-full rounded-md border-0 p-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gray-600 sm:text-sm sm:leading-6"
+          value={fa}
+        >
           <option value="1.1">Постельный режим</option>
           <option value="1.2">Палатный режим</option>
           <option value="1.3">Общий режим</option>
         </select>
       </div>
       <div className="input-container">
-        <label htmlFor="tf" className="text-m font-mono leading-6 text-gray-900">Температурный фактор: </label>
-        <select id="tf"           className="w-full rounded-md border-0 p-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gray-600 sm:text-sm sm:leading-6" value={tf} onChange={(e) => setTf(e.target.value)}>
+        <label
+          htmlFor="tf"
+          className="text-m font-mono leading-6 text-gray-900"
+        >
+          Температурный фактор:{" "}
+        </label>
+        <select
+          id="tf"
+          onChange={(e) => setTf(e.target.value)}
+          className="w-full rounded-md border-0 p-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gray-600 sm:text-sm sm:leading-6"
+          value={tf}
+        >
           <option value="1.1">t &lt; 38.0</option>
           <option value="1.2">t &gt;= 38.0, но &lt; 38.9</option>
           <option value="1.3">t &gt;= 39.0, но &lt; 39.9</option>
@@ -92,8 +123,15 @@ function Energy() {
         </select>
       </div>
       <div className="input-container">
-        <label htmlFor="g" className="text-m font-mono leading-6 text-gray-900">Гипотрофия: </label>
-        <select id="g" className="w-full rounded-md border-0 p-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gray-600 sm:text-sm sm:leading-6" value={g} onChange={(e) => setG(e.target.value)}>
+        <label htmlFor="g" className="text-m font-mono leading-6 text-gray-900">
+          Гипотрофия:{" "}
+        </label>
+        <select
+          id="g"
+          onChange={(e) => setG(e.target.value)}
+          className="w-full rounded-md border-0 p-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gray-600 sm:text-sm sm:leading-6"
+          value={g}
+        >
           <option value="1">Отсутствует</option>
           <option value="1.1">1 степень</option>
           <option value="1.2">2 степень</option>
@@ -101,8 +139,17 @@ function Energy() {
         </select>
       </div>
       <div className="input-container">
-        <label htmlFor="ts" className="text-m font-mono leading-6 text-gray-900">Фактор стресса </label>
-        <select id="ts" className="w-full rounded-md border-0 p-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gray-600 sm:text-sm sm:leading-6">
+        <label
+          htmlFor="ts"
+          className="text-m font-mono leading-6 text-gray-900"
+        >
+          Фактор стресса{" "}
+        </label>
+        <select
+          id="ts"
+          onChange={(e) => setTs(e.target.value)}
+          className="w-full rounded-md border-0 p-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gray-600 sm:text-sm sm:leading-6"
+        >
           <option selected value="1.0">
             Отсутствует
           </option>
@@ -116,9 +163,18 @@ function Energy() {
           <option value="2">Ожоги &gt;= 50%</option>
         </select>
       </div>
-      <button onClick={calculate} className="w-full rounded-md border-0 p-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gray-600 sm:text-sm sm:leading-6"
->Рассчитать</button>
-      <div className="result">{result}</div>
+      <button
+        onClick={calculate}
+        className="mt-2 w-full rounded-md border-0 p-2 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-gray-600 sm:text-sm sm:leading-6"
+      >
+        Рассчитать
+      </button>
+      <div className="mt-4 text-gray-900 text-l font-mono leading-7 text-gray-900 result">
+        Фактический расход энергии (ФРЭ):{" "}
+        <span className="underline decoration-2 decoration-orange-400">
+          {result}
+        </span>
+      </div>
     </div>
   );
 }

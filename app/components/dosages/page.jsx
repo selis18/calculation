@@ -12,8 +12,8 @@ import {
 } from "./Calculations";
 
 function CalculationPage() {
-  let [height, setHeight] = useState(0);
-  let [weight, setWeight] = useState(0);
+  let [height, setHeight] = useState(null);
+  let [weight, setWeight] = useState(null);
   let bodySurfaceArea = calculateBodySurfaceArea(height, weight);
   let dosageArray = calculateDosage(bodySurfaceArea);
   let etoposideDosage = dosageArray[0];
@@ -89,7 +89,7 @@ function CalculationPage() {
           </div>
         </div>
 
-        <div className="pt-12">
+        <div className="pt-4">
           <h2 className="text-xl font-mono font-semibold leading-7 text-gray-900">
             Результаты расчета:
           </h2>
