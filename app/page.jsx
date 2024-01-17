@@ -1,6 +1,7 @@
 'use client'
 import React, { useState } from 'react';
 import CalculationPage from './components/dosages/page';
+import Energy from './components/energy/page'
 
 const Tab = ({ label, active, onClick }) => (
   <div
@@ -38,7 +39,7 @@ const Tabs = ({ tabs }) => {
 
 const tabs = [
   { label: 'Расчет дозировок и площади поверхности тела', content: <CalculationPage /> },
-  { label: 'Расчет фактического расхода энергии', content: 'Content for Tab 2' },
+  { label: 'Расчет фактического расхода энергии', content: <Energy /> },
 
 ];
 
